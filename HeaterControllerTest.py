@@ -6,7 +6,7 @@ class HeaterControllerTestOn(unittest.TestCase):
 
     def setUp(self):
         #Intial heater status is off
-        self.controller = HeaterController('OFF') 
+        self.controller = HeaterController('OFF')
 
     ##Heater on
     def test_heater_status_on(self):
@@ -31,7 +31,6 @@ class HeaterControllerTestOn(unittest.TestCase):
         print('test_change_heater_status_on')
         input_text = self.controller.change_heater_status()
         self.assertEqual(input_text,'ON','heater is not on')
-
 
 class HeaterControllerTestOff(unittest.TestCase):
 
@@ -64,4 +63,4 @@ class HeaterControllerTestOff(unittest.TestCase):
         self.assertEqual(input_text,'OFF','heater is not off')
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(exit=False)
