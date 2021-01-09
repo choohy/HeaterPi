@@ -6,7 +6,7 @@ class StatusManagerTest(unittest.TestCase):
 
     def setUp(self):
         #Intial Utilties
-        self.status_manager = StatusManager() 
+        self.status_manager = StatusManager('OFF') 
 
     ##Status On
     def test_status_on(self):
@@ -22,7 +22,7 @@ class StatusManagerOnTest(unittest.TestCase):
 
     def setUp(self):
         #Intial Utilties
-        self.status_manager = StatusManager() 
+        self.status_manager = StatusManager('OFF') 
 
     ##Change status on
     @patch('StatusManager.StatusManager.get_input', return_value='1')
@@ -35,7 +35,7 @@ class StatusManagerOffTest(unittest.TestCase):
 
     def setUp(self):
         #Intial Utilties
-        self.status_manager = StatusManager() 
+        self.status_manager = StatusManager('OFF') 
 
     ##Change status on
     @patch('StatusManager.StatusManager.get_input', return_value='0')
